@@ -1,4 +1,3 @@
-import newrelic from 'newrelic';
 import { Controller, Get, Req } from '@nestjs/common';
 import { Request } from 'express';
 

@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  parent:
+    container_name: parent
+    build: ./parent
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./parent:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    networks:
+      - nest
+
+  child:
+    container_name: child
+    build: ./child
+    ports:
+      - "3001:3000"
+    volumes:
+      - "./child:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    networks:
+      - nest
+
+networks:
+  nest:
+    driver: bridge
