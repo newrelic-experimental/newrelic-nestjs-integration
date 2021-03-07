@@ -6,12 +6,12 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class AppService {
   constructor(private http: HttpService) {}
-  getHello(): string {
-    return newrelic.startSegment('getHelloService', false, () => {
-      console.log('Calling child ...');
-      return this.http
-        .get('http://child:3000')
-        .pipe(map((response) => console.log(`Child says ${response.data}`)));
-    });
+  getHello(): any {
+    //return newrelic.startSegment('getHelloService', false, () => {
+    console.log('Calling child ...');
+    return this.http
+      .get('http://child:3000')
+      .pipe(map((response) => console.log(`Child says ${response.data}`)));
+    // });
   }
 }
