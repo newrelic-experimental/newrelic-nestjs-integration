@@ -11,7 +11,11 @@ export class AppService {
     console.log('Calling child ...');
     return this.http
       .get('http://child:3000')
-      .pipe(map((response) => console.log(`Child says ${response.data}`)));
+      .pipe(
+        map((response) =>
+          console.log(`Child says ${JSON.stringify(response.data)}`),
+        ),
+      );
     // });
   }
 }
