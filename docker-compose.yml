@@ -14,12 +14,28 @@ services:
 
   child:
     container_name: child
+    depends_on:
+      - "mongodb"
     build: ./child
     ports:
       - "3001:3000"
     volumes:
       - "./child:/usr/src/app"
       - "/usr/src/app/node_modules"
+    networks:
+      - nest
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      MONGO_DATA_DIR: /data/db
+      MONGO_LOG_DIR: /dev/null
+      MONGO_INITDB_DATABASE: cats
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "27017:27017"
     networks:
       - nest
 

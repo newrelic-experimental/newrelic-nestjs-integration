@@ -1,10 +1,17 @@
-import { Controller, Get, Req } from '@nestjs/common';
-import { Request } from 'express';
+import { Controller, Get } from '@nestjs/common';
+import { CatsService } from './cats.service';
 
 @Controller('cats')
 export class CatsController {
-  @Get()
-  findAll(@Req() request: Request): string {
-    return 'This action returns all cats';
+  constructor(private readonly catsService: CatsService) {}
+
+  @Get('create')
+  async create(): Promise<string> {
+    return this.catsService.create();
+  }
+
+  @Get('getAll')
+  async findAll(): Promise<string> {
+    return this.catsService.getAll();
   }
 }

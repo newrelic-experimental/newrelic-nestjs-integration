@@ -35,3 +35,6 @@ newrelic_agent.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# mongodb data
+data
