@@ -35,8 +35,21 @@ Run `docker-compose up` and wait for all images to install and start the app.
 #### Use
 The `parent` service has the following endpoints:
 * GET `localhost:3000/`
-* GET `localhost:3000/cats/create`
+  * just to confirm the app works
+* POST `localhost:3000/cats/create`
+  * to create a cat
+  * with a json body payload containing 3 properties `name`, `age` & `breed`
+    ```
+    // for example 
+    {
+        "name": "Tom",
+        "age": 3,
+        "breed": "Persian"
+    }
+    ```
 * GET `localhost:3000/cats/getAll`
+  * to get all cats
+
 
 Call any of these endpoints and you'll see a following message in the console:
 <img width="837" alt="Screenshot 2021-03-11 at 20 04 34" src="https://user-images.githubusercontent.com/6328360/110847596-0466e900-82a5-11eb-9286-4b465dac3710.png">

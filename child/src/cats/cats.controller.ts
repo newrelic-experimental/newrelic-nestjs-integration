@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
@@ -8,14 +8,9 @@ import { Cat } from './schemas/cat.schema';
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
-  @Get('create')
-  create(): Promise<Cat> {
-    const createCatDto: CreateCatDto = {
-      name: 'Bob',
-      age: 3,
-      breed: 'Persian',
-    };
-    return this.catsService.create(createCatDto);
+  @Post('create')
+  create(@Body() cat: CreateCatDto): Promise<Cat> {
+    return this.catsService.create(cat);
   }
 
   @Get('getAll')
