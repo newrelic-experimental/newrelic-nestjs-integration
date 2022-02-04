@@ -9,11 +9,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['mwilk-nestjs-app'],
+  app_name: ['YOUR_APP_NAME'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'eu01xx3875ddb7d2c8e61486c7e92a563b95NRAL',
+  license_key: 'YOUR_LICENSE_KEY',
   /**
    * This setting controls distributed tracing.
    * Distributed tracing lets you see the path that a request takes through your
