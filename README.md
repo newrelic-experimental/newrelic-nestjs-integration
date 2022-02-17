@@ -19,7 +19,7 @@ The above diagram shows the (dockerized) architecture of the app in this repo wi
  * `child` container - in the middle (port: 3001)
  * booth `parent` and `child` have New Relic NodeJs Agent installed (and required by each of the microservices)
  
-## Hot to run
+## How to run
  
 ### Prerequisites
 * New Relic Account (sign up [here](https://newrelic.com/signup))
