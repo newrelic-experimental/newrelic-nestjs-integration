@@ -1,5 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const newrelic = require('newrelic');
+// eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-unused-vars
+import newrelic from 'newrelic';
 import { Injectable, HttpService } from '@nestjs/common';
 import { map } from 'rxjs/operators';
 

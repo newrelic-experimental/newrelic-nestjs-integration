@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import newrelic from 'newrelic';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
