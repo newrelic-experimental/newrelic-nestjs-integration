@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@types/jest": "^28.1.8"
+  },
+  "dependencies": {
+    "@nestjs/axios": "^0.1.0",
+    "@nestjs/common": "^9.0.11",
+    "@nestjs/core": "^9.0.11",
+    "@nestjs/mongoose": "^9.2.0",
+    "@nestjs/testing": "^9.0.11",
+    "nestjs": "^0.0.1",
+    "newrelic": "^9.0.2"
+  }
+}
