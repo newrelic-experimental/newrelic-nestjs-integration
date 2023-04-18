@@ -2,6 +2,9 @@
 
 # New Relic NestJs Integration Example App
 
+> **Warning**
+> Please note that using a custom interceptor is unnecessary when instrumenting with the latest versions of the New Relic Node agent. In fact, using a custom interceptor may cause conflicts and lead to unexpected behavior. That said, you can still use this repository to experiment with NestJs and the New Relic agent, and easily send data to the New Relic platform.
+
 ### Introduction
 
 This repo contains an example of two NestJs micoroservices (called parent and child) talking to each other over http on the same network (nest network).
