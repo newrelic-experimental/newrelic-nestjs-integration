@@ -12,9 +12,10 @@ export class AppService {
     return this.http
       .get('http://child:3000')
       .pipe(
-        map((response) =>
-          console.log(`Child says ${JSON.stringify(response.data)}`),
-        ),
+        map((response) => {
+          console.log(`Child says ${JSON.stringify(response.data)}`);
+          return response.data;
+        })
       );
     // });
   }
