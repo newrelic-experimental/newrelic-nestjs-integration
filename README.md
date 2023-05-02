@@ -3,7 +3,7 @@
 # New Relic NestJs Integration Example App
 
 > **Warning**
-> Please note that using a custom interceptor is unnecessary when instrumenting with the latest versions of the New Relic Node agent. In fact, using a custom interceptor may cause conflicts and lead to unexpected behavior. That said, you can still use this repository to experiment with NestJs and the New Relic agent, and easily send data to the New Relic platform.
+> Please note that using a custom interceptor is unnecessary when instrumenting with the latest versions of the New Relic Node agent. In fact, using a custom interceptor may cause conflicts and lead to unexpected behavior. Please see instead [this example](https://github.com/newrelic/newrelic-node-examples/tree/main/nestjs) on how to enable New Relic instrumentation for Nest.js. That said, you can still use this repository to experiment with NestJs and the New Relic agent, and easily send data to the New Relic platform.
 
 ### Introduction
 
