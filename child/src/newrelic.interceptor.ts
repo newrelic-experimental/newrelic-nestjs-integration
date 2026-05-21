@@ -5,7 +5,7 @@ import {
   CallHandler,
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { finalize } from 'rxjs/operators';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const util = require('util');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -17,17 +17,18 @@ export class NewrelicInterceptor implements NestInterceptor {
     console.log(
       `Child Interceptor before: ${util.inspect(context.getHandler().name)}`,
     );
+
     return newrelic.startWebTransaction(context.getHandler().name, function () {
       const transaction = newrelic.getTransaction();
-      // const now = Date.now();
+
       return next.handle().pipe(
-        tap(() => {
+        finalize(() => {
           console.log(
-            `Child Interceptor after: ${util.inspect(
+            `Child Interceptor finalized: ${util.inspect(
               context.getHandler().name,
             )}`,
           );
-          return transaction.end();
+          transaction.end();
         }),
       );
     });
