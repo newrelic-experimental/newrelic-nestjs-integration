@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   parent:
     container_name: parent
@@ -26,7 +24,7 @@ services:
       - nest
 
   mongodb:
-    image: mongo:latest
+    image: mongo:8
     container_name: mongodb
     environment:
       MONGO_DATA_DIR: /data/db
