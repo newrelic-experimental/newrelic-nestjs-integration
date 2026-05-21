@@ -53,6 +53,9 @@
     "typescript": "^6.0.0",
     "typescript-eslint": "^8.59.0"
   },
+  "overrides": {
+    "protobufjs": "^8.2.0"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
