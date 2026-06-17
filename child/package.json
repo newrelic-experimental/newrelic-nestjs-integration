@@ -27,7 +27,7 @@
     "@nestjs/platform-express": "^11.0.0",
     "class-validator": "^0.14.1",
     "mongoose": "^9.0.0",
-    "newrelic": "^14.0.0",
+    "newrelic": "^14.1.0",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.0",
     "rxjs": "^7.8.1"
