@@ -26,7 +26,7 @@
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
     "axios": "^1.16.1",
-    "newrelic": "^14.0.0",
+    "newrelic": "^14.1.0",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.0",
     "rxjs": "^7.8.0"
